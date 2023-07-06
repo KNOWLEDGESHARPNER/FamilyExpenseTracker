@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% include 'navbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="saveexpensedata" method="post">
+  {% csrf_token %}
+  <select class="custom-select paddown" name="name">
+    {% for i in x %}
+      <option value="{{i.id}}">{{i.name}}</option>
+      {% endfor %}
+  </select>
+    <div class="form-gruop">
+        <input type="text" class="form-control" placeholder="Purpose" name="purpose">
+    </div>
+    <div class="form-gruop">
+        <input type="number" class="form-control" placeholder="Expense" name="expense">
+
+    </div>
+    <input type="submit" class="btn btn-primary btn-block" value="Add Expense">
+</form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% include 'navbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    Name:<input type="text" value="{{x.name}}" id="tbname" name="MemberName"><br>
+    Mobile:<input type="number" value="{{x.mobile}}" id="tbmob" name="MemberMobile"><br>
+    Occupation:<input type="text" value="{{x.occupation}}" id="tboccp" name="MemberOccupation"><br>
+    Income:<input type="number" value="{{x.income}}" id="tbincome" name="MemberIncome"><br>
+    <input type="submit" value="update" name="btnSub">
+</form>
+</body>
+</html>

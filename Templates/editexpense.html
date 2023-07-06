@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    membername_id:<input type="text" value="{{x.membername_id}}" id="tbname" name="membername_id"><br>
+    purpose:<input type="text" value="{{x.purpose}}" id="tbmob" name="purpose"><br>
+    expense:<input type="text" value="{{x.expense}}" id="tboccp" name="expense"><br>
+    <input type="submit" value="editexpense" name="btnSub">
+</form>
+</body>
+</html>

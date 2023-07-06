@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% include 'navbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>membername_id</th>
+        <th>membername</th>
+        <th>expense</th>
+        <th>purpose</th>
+    </tr>
+    {% for item in x %}
+    <tr>
+        <td>{{item.membername_id}}</td>
+        <td>{{item.membername}}</td>
+        <td>{{item.expense}}</td>
+        <td>{{item.purpose}}</td>
+        <td><a href="{% url 'editexpense' item.id %}">edit</a></td>
+        <td><a href="{% url 'deleteexpense' item.id %}">delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

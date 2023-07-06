@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% include 'navbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="addmemberaction" method="post">
+    {% csrf_token %}
+    Name:<input type="text" id="tbname" name="MemberName"><br>
+    Mobile:<input type="number" id="tbmob" name="MemberMobile"><br>
+    Occupation:<input type="text" id="tboccp" name="MemberOccupation"><br>
+    Income:<input type="number" id="tbincome" name="MemberIncome"><br>
+    <input type="submit" value="addmember">
+
+</form>
+</body>
+</html>
