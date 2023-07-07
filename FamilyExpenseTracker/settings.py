@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-xk=ug8-xtl&jki!_6ki=qz%2m$68z&4tr71jeqs^9f%ta_(o(f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['34.29.177.240']
 
 
 # Application definition
@@ -74,14 +74,25 @@ WSGI_APPLICATION = 'FamilyExpenseTracker.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'ashudb',
+#         'USER':'root',
+#         'PASSWORD':'Kavash@143',
+#         'HOST':'localhost',
+#         'PORT':'3306',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ashudb',
-        'USER':'root',
-        'PASSWORD':'Kavash@143',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'mydb',
+        'USER':'ashwath',
+        'PASSWORD':'ashu1234',
         'HOST':'localhost',
-        'PORT':'3306',
+        'PORT':'',
     }
 }
 
@@ -121,6 +132,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT=os.path.join(BASE_DIR,'static/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
