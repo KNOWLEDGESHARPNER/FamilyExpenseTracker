@@ -83,4 +83,4 @@ def editexpensefunction(request,id):
 def deleteexpensefunction(request,id):
     exp_del=Expenses.objects.get(id=id)
     exp_del.delete()
-    # return redirect('showexpense')
+    return redirect('showexpense')

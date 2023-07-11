@@ -23,7 +23,7 @@
         <td>{{item.expense}}</td>
         <td>{{item.purpose}}</td>
         <td><a href="{% url 'editexpense' item.id %}">edit</a></td>
-        <td><a href="{% url 'deleteexpense' item.id %}">delete</a></td>
+        <td><a href="{% url 'deleteexpense' item.id %}">deleteExpense</a></td>
     </tr>
     {% endfor %}
 </table>
