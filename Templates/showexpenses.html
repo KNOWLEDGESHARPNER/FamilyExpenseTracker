@@ -16,12 +16,13 @@
     </tr>
     {% for item in x %}
     <tr>
+        <td>{{item.id}}</td>
         <td>{{item.membername_id}}</td>
         <td>{{item.membername}}</td>
         <td>{{item.expense}}</td>
         <td>{{item.purpose}}</td>
         <td><a href="{% url 'editexpense' item.id %}">edit</a></td>
-        <td><a href="{% url 'deleteexpense' item.membername_id %}">delete</a></td>
+        <td><a href="{% url 'deleteexpense' item.id %}">delete</a></td>
     </tr>
     {% endfor %}
 </table>
