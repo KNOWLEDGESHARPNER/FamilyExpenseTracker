@@ -27,7 +27,7 @@ urlpatterns = [
     path('showexpense',views.showexpensefunction,name='showexpense'),
     path('addmemberaction',views.addmemberlogic),
     path('update/<int:id>',views.updatefunction,name='update'),
-    path('delete/<int:id>',views.deletefunction,name='delete'),
+    # path('delete/<int:id>',views.deletefunction,name='delete'),
     path('editexpense/<int:id>',views.editexpensefunction,name='editexpense'),
     path('deleteexpense/<int:id>',views.deleteexpensefunction,name='deleteexpense'),
 
