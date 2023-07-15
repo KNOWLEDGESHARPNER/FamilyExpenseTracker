@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% include 'navbar.html' %}
-{% load staticfiles %}
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,6 @@
 </head>
 <body>
 <h1 style="color:blue">Welcome to Family Expense Tracker</h1>
-<img src="{% staticfiles 'staticfiles/images/Family.jpg' %}" alt="family image">
+<img src="{% static 'staticfiles/images/Family.jpg' %}" alt="family image">
 </body>
 </html>
