@@ -137,7 +137,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"), # Django will search for /src/
+    os.path.join(BASE_DIR, "staticfiles"), # Django will search for /src/
 ]
 STATIC_ROOT =  os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
