@@ -16,4 +16,4 @@ class Expenses(models.Model):
     purpose = models.TextField(default=None,max_length=120)
 
     def __str__(self):
-        return self.membername
+        return f"{self.membername} {self.expense} {self.purpose}"
