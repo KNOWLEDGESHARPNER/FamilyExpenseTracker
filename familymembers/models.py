@@ -14,3 +14,6 @@ class Expenses(models.Model):
     membername=models.ForeignKey(FamilyMembers,on_delete=models.CASCADE)
     expense=models.IntegerField(default=0)
     purpose = models.TextField(default=None,max_length=120)
+
+    def __str__(self):
+        return self.membername
